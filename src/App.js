@@ -1,92 +1,69 @@
 import React from "react";
 import "./App.css";
+import { motion } from "framer-motion";
 
 function App() {
   return (
     <div className="container">
 
-      {/* HERO SECTION */}
-      <section className="hero">
-        <img src="/random.jpg" alt="Astitva" className="profile-img" />
+      {/* HERO */}
+      <motion.section 
+        className="hero"
+        initial={{ opacity: 0, y: -50 }}
+        animate={{ opacity: 1, y: 0 }}
+      >
+        <img src="/random.jpg" alt="profile" className="profile-img" />
         <h1>Astitva Anand</h1>
-        <p>PGDM Student | Marketing & Research Enthusiast</p>
+        <p>Marketing & Research Enthusiast</p>
 
-        <a 
-          href="https://www.linkedin.com/in/astitvaanand" 
-          target="_blank" 
-          rel="noreferrer"
-          className="btn"
-        >
+        <a href="https://www.linkedin.com/in/astitvaanand" target="_blank" rel="noreferrer" className="btn">
           LinkedIn
         </a>
-      </section>
+      </motion.section>
 
       {/* ABOUT */}
-      <section>
+      <motion.section className="glass" whileHover={{ scale: 1.02 }}>
         <h2>About Me</h2>
         <p>
-          I am a PGDM student passionate about marketing, analytics, and business strategy.
-          I have hands-on experience in market research, brand promotion, and data-driven decision making.
+          Passionate PGDM student skilled in marketing, analytics and business strategy.
         </p>
-      </section>
-
-      {/* EDUCATION */}
-      <section>
-        <h2>Education</h2>
-        <ul>
-          <li>PGDM - Sparsh Global Business School (2025-27)</li>
-          <li>BBA - BIT Mesra (83.6%)</li>
-          <li>Class XII - 90.04%</li>
-          <li>Class X - 82.4%</li>
-        </ul>
-      </section>
-
-      {/* INTERNSHIP */}
-      <section>
-        <h2>Internship</h2>
-        <p>
-          <strong>Mahindra & Mahindra Finance</strong> (Marketing & Research)
-        </p>
-        <p>
-          Conducted market research, analyzed customer engagement decline, 
-          visited partner companies, and presented reports to zonal heads.
-        </p>
-      </section>
+      </motion.section>
 
       {/* PROJECTS */}
-      <section>
+      <motion.section>
         <h2>Projects</h2>
 
-        <div className="card">
-          <h3>NGO Marketing (Team Green)</h3>
-          <p>Led campaign "7 GREEN" for awareness & plantation drives.</p>
-        </div>
+        <div className="grid">
+          <motion.div className="card glass" whileHover={{ scale: 1.05 }}>
+            <h3>NGO Marketing</h3>
+            <p>Campaign "7 GREEN" for awareness & plantation.</p>
+          </motion.div>
 
-        <div className="card">
-          <h3>Monte Carlo Marketing Research</h3>
-          <p>Applied STP, SWOT & real-world marketing strategies.</p>
-        </div>
+          <motion.div className="card glass" whileHover={{ scale: 1.05 }}>
+            <h3>Monte Carlo Research</h3>
+            <p>Applied STP & SWOT in real market study.</p>
+          </motion.div>
 
-        <div className="card">
-          <h3>Healthcare Data Analysis</h3>
-          <p>Used SPSS to analyze impact of information overload on decisions.</p>
+          <motion.div className="card glass" whileHover={{ scale: 1.05 }}>
+            <h3>Healthcare Analysis</h3>
+            <p>SPSS-based decision impact analysis.</p>
+          </motion.div>
         </div>
-
-      </section>
+      </motion.section>
 
       {/* SKILLS */}
-      <section>
+      <motion.section className="glass" whileHover={{ scale: 1.02 }}>
         <h2>Skills</h2>
-        <p>SPSS | Excel | Tally | Canva</p>
-        <p>Leadership | Communication | Creativity</p>
-      </section>
+        <p>SPSS • Excel • Tally • Canva</p>
+        <p>Leadership • Communication • Creativity</p>
+      </motion.section>
 
       {/* CONTACT */}
-      <section>
+      <motion.section className="glass" whileHover={{ scale: 1.02 }}>
         <h2>Contact</h2>
         <p>Email: Pgdm25.astitva.a@sparshgbs.in</p>
         <p>Phone: 9508530953</p>
-      </section>
+      </motion.section>
 
     </div>
   );
